@@ -1,0 +1,44 @@
+{
+  "model_name": "XGBoost",
+  "model_file": "final_model.joblib",
+  "params": {
+    "n_estimators": 700,
+    "learning_rate": 0.05760345546210345,
+    "max_depth": 6,
+    "min_child_weight": 0.514935123851333,
+    "subsample": 0.8075229530089713,
+    "colsample_bytree": 0.7109394684006103,
+    "reg_lambda": 0.0033532576310608196
+  },
+  "features": [
+    "dist",
+    "dist_rank",
+    "dist_minus_min",
+    "dist_ratio",
+    "n_cand",
+    "heading_diff",
+    "heading_cos",
+    "heading_valid",
+    "speed",
+    "arc_len",
+    "t_proj",
+    "ctx_dist_mean",
+    "ctx_dist_max",
+    "ctx_heading_diff",
+    "has_reverse_cand",
+    "to_out_deg",
+    "from_in_deg",
+    "dt_prev",
+    "dt_next"
+  ],
+  "cand_radius_m": 50.0,
+  "cand_max_k": 12,
+  "decoder": {
+    "beta": 5.0,
+    "w_e": 0.5,
+    "no_path_logp": -30.0,
+    "gap_s": 60.0
+  },
+  "trained_on": "80 train trips (<=1500 labelled points per trip)",
+  "fit_seconds": 23.805545568466187
+}

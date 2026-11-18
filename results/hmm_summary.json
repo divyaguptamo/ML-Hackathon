@@ -1,0 +1,16 @@
+{
+  "model": "XGBoost",
+  "decoder": {
+    "beta": 5.0,
+    "w_e": 0.5,
+    "no_path_logp": -30.0,
+    "gap_s": 60.0
+  },
+  "pooled_cls_top1": 0.909214446244708,
+  "pooled_hmm_top1": 0.9520200700360634,
+  "mean_cls_continuity": 0.9448738479416077,
+  "mean_hmm_continuity": 0.9797947406905212,
+  "mean_cls_route_f1": 0.905523691014787,
+  "mean_hmm_route_f1": 0.9745443567437146,
+  "mean_seconds_per_trip": 0.7394092082977295
+}
