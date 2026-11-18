@@ -8,6 +8,9 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.neural_network import MLPClassifier
+import lightgbm as lgb
+import xgboost as xgb
 
 from . import config as C
 from .candidates import FEATURES
@@ -20,6 +23,13 @@ MODEL_SPECS = {
     "DecisionTree": ("Tree-based", dict(max_depth=10, min_samples_leaf=20), None),
     "RandomForest": ("Ensemble (bagging)", dict(n_estimators=100, max_depth=16, min_samples_leaf=5,
                                                  max_samples=0.3), None),
+    "LightGBM": ("Boosting", dict(n_estimators=300, learning_rate=0.05, num_leaves=31,
+                                  min_child_samples=20, subsample=1.0, colsample_bytree=1.0), None),
+    "XGBoost": ("Boosting", dict(n_estimators=300, learning_rate=0.05, max_depth=6,
+                                 subsample=1.0, colsample_bytree=1.0), None),
+    "MLP": ("Neural network", dict(hidden_layer_sizes=(64, 32), alpha=1e-4, learning_rate_init=1e-3,
+                                   batch_size=1024, max_iter=60, early_stopping=True,
+                                   validation_fraction=0.1, n_iter_no_change=6), None),
 }
 
 
@@ -36,6 +46,12 @@ def make_model(name, params=None):
         return DecisionTreeClassifier(random_state=s, **p)
     if name == "RandomForest":
         return RandomForestClassifier(random_state=s, n_jobs=2, **p)
+    if name == "LightGBM":
+        return lgb.LGBMClassifier(random_state=s, n_jobs=2, verbose=-1, subsample_freq=1, **p)
+    if name == "XGBoost":
+        return xgb.XGBClassifier(random_state=s, n_jobs=2, tree_method="hist", eval_metric="logloss", **p)
+    if name == "MLP":
+        return make_pipeline(StandardScaler(), MLPClassifier(random_state=s, **p))
     raise KeyError(name)
 
 
