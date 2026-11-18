@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+# raw and processed data are not committed (see data/README.md)
+data/raw/
+data/processed/
+results/preds/*.pkl
