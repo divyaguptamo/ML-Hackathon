@@ -1,0 +1,77 @@
+train rows=760,023 points=97,238 trips=80 | test rows=147,002 points=19,133
+  KNN fold0: f1_macro=0.9121 top1=0.8521 logloss=0.1294 fit=0.0s
+  KNN fold1: f1_macro=0.9020 top1=0.8424 logloss=0.1566 fit=0.0s
+  KNN fold2: f1_macro=0.9272 top1=0.8945 logloss=0.1143 fit=0.0s
+  KNN fold3: f1_macro=0.9138 top1=0.8695 logloss=0.1561 fit=0.0s
+  KNN fold4: f1_macro=0.9249 top1=0.8949 logloss=0.1276 fit=0.0s
+model                                                              KNN
+family                                                  Instance-based
+config                      {"n_neighbors": 25, "weights": "distance"}
+cv_f1_macro_mean                                              0.916005
+cv_f1_macro_std                                               0.010261
+cv_top1_mean                                                  0.870671
+cv_top1_std                                                   0.023962
+cv_log_loss                                                   0.136808
+train_top1                                                    0.898548
+train_f1_macro                                                0.929664
+train_log_loss                                                  0.1014
+test_top1                                                     0.875137
+test_f1_macro                                                 0.918289
+test_precision_macro                                          0.931106
+test_recall_macro                                             0.906505
+test_log_loss                                                 0.126887
+test_accuracy                                                 0.964069
+test_route_continuity                                           0.9243
+fit_time_s                                                    0.027755
+inference_ms_per_1k_rows                                    142.904274
+  DecisionTree fold0: f1_macro=0.9277 top1=0.8661 logloss=0.0911 fit=9.6s
+  DecisionTree fold1: f1_macro=0.9221 top1=0.8613 logloss=0.0993 fit=9.9s
+  DecisionTree fold2: f1_macro=0.9415 top1=0.9124 logloss=0.0695 fit=9.6s
+  DecisionTree fold3: f1_macro=0.9292 top1=0.8812 logloss=0.1009 fit=9.7s
+  DecisionTree fold4: f1_macro=0.9357 top1=0.9008 logloss=0.0867 fit=9.5s
+model                                                    DecisionTree
+family                                                     Tree-based
+config                      {"max_depth": 10, "min_samples_leaf": 20}
+cv_f1_macro_mean                                             0.931259
+cv_f1_macro_std                                              0.007524
+cv_top1_mean                                                  0.88437
+cv_top1_std                                                   0.02194
+cv_log_loss                                                  0.089512
+train_top1                                                   0.904163
+train_f1_macro                                               0.943407
+train_log_loss                                               0.068294
+test_top1                                                    0.890347
+test_f1_macro                                                0.932999
+test_precision_macro                                         0.937134
+test_recall_macro                                            0.928975
+test_log_loss                                                 0.07994
+test_accuracy                                                 0.96996
+test_route_continuity                                        0.931294
+fit_time_s                                                  12.093824
+inference_ms_per_1k_rows                                     0.126423
+  RandomForest fold0: f1_macro=0.9299 top1=0.8723 logloss=0.0754 fit=39.3s
+  RandomForest fold1: f1_macro=0.9250 top1=0.8624 logloss=0.0860 fit=37.3s
+  RandomForest fold2: f1_macro=0.9464 top1=0.9176 logloss=0.0607 fit=38.2s
+  RandomForest fold3: f1_macro=0.9343 top1=0.8906 logloss=0.0787 fit=37.8s
+  RandomForest fold4: f1_macro=0.9412 top1=0.9101 logloss=0.0723 fit=38.6s
+model                                                            RandomForest
+family                                                     Ensemble (bagging)
+config                      {"n_estimators": 100, "max_depth": 16, "min_sa...
+cv_f1_macro_mean                                                     0.935345
+cv_f1_macro_std                                                      0.008602
+cv_top1_mean                                                         0.890583
+cv_top1_std                                                          0.023679
+cv_log_loss                                                          0.074619
+train_top1                                                           0.915424
+train_f1_macro                                                       0.950065
+train_log_loss                                                       0.056351
+test_top1                                                            0.896253
+test_f1_macro                                                        0.935621
+test_precision_macro                                                 0.948566
+test_recall_macro                                                    0.923684
+test_log_loss                                                        0.072396
+test_accuracy                                                        0.971667
+test_route_continuity                                                0.934897
+fit_time_s                                                          50.567938
+inference_ms_per_1k_rows                                             3.413516
+done

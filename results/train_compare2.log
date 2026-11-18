@@ -1,0 +1,79 @@
+train rows=760,023 points=97,238 trips=80 | test rows=147,002 points=19,133
+  LightGBM fold0: f1_macro=0.9327 top1=0.8780 logloss=0.0733 fit=8.1s
+  LightGBM fold1: f1_macro=0.9295 top1=0.8729 logloss=0.0805 fit=7.8s
+  LightGBM fold2: f1_macro=0.9493 top1=0.9198 logloss=0.0576 fit=8.1s
+  LightGBM fold3: f1_macro=0.9364 top1=0.8922 logloss=0.0784 fit=8.0s
+  LightGBM fold4: f1_macro=0.9464 top1=0.9155 logloss=0.0684 fit=7.9s
+/usr/local/lib/python3.13/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+model                                                                LightGBM
+family                                                               Boosting
+config                      {"n_estimators": 300, "learning_rate": 0.05, "...
+cv_f1_macro_mean                                                     0.938863
+cv_f1_macro_std                                                      0.008647
+cv_top1_mean                                                         0.895695
+cv_top1_std                                                          0.021304
+cv_log_loss                                                          0.071633
+train_top1                                                            0.92071
+train_f1_macro                                                       0.952567
+train_log_loss                                                       0.054861
+test_top1                                                            0.905242
+test_f1_macro                                                        0.940564
+test_precision_macro                                                 0.945644
+test_recall_macro                                                    0.935646
+test_log_loss                                                        0.068472
+test_accuracy                                                        0.973402
+test_route_continuity                                                 0.94038
+fit_time_s                                                          10.029485
+inference_ms_per_1k_rows                                             6.159163
+  XGBoost fold0: f1_macro=0.9324 top1=0.8781 logloss=0.0731 fit=8.1s
+  XGBoost fold1: f1_macro=0.9307 top1=0.8754 logloss=0.0800 fit=8.9s
+  XGBoost fold2: f1_macro=0.9504 top1=0.9217 logloss=0.0561 fit=8.7s
+  XGBoost fold3: f1_macro=0.9376 top1=0.8955 logloss=0.0762 fit=8.3s
+  XGBoost fold4: f1_macro=0.9464 top1=0.9155 logloss=0.0684 fit=9.5s
+model                                                                 XGBoost
+family                                                               Boosting
+config                      {"n_estimators": 300, "learning_rate": 0.05, "...
+cv_f1_macro_mean                                                     0.939504
+cv_f1_macro_std                                                      0.008643
+cv_top1_mean                                                         0.897222
+cv_top1_std                                                          0.021086
+cv_log_loss                                                          0.070761
+train_top1                                                           0.921019
+train_f1_macro                                                       0.953731
+train_log_loss                                                       0.054558
+test_top1                                                            0.907228
+test_f1_macro                                                         0.94028
+test_precision_macro                                                  0.94662
+test_recall_macro                                                    0.934192
+test_log_loss                                                        0.067832
+test_accuracy                                                        0.973347
+test_route_continuity                                                0.940425
+fit_time_s                                                          10.604069
+inference_ms_per_1k_rows                                             2.009493
+  MLP fold0: f1_macro=0.9269 top1=0.8677 logloss=0.0823 fit=17.6s
+  MLP fold1: f1_macro=0.9240 top1=0.8651 logloss=0.0896 fit=22.4s
+  MLP fold2: f1_macro=0.9439 top1=0.9140 logloss=0.0672 fit=19.8s
+  MLP fold3: f1_macro=0.9319 top1=0.8896 logloss=0.0853 fit=29.8s
+  MLP fold4: f1_macro=0.9402 top1=0.9114 logloss=0.0785 fit=21.6s
+model                                                                     MLP
+family                                                         Neural network
+config                      {"hidden_layer_sizes": [64, 32], "alpha": 0.00...
+cv_f1_macro_mean                                                     0.933382
+cv_f1_macro_std                                                      0.008513
+cv_top1_mean                                                         0.889583
+cv_top1_std                                                          0.023179
+cv_log_loss                                                          0.080583
+train_top1                                                           0.905284
+train_f1_macro                                                       0.943054
+train_log_loss                                                       0.066993
+test_top1                                                            0.903413
+test_f1_macro                                                        0.936273
+test_precision_macro                                                 0.948265
+test_recall_macro                                                    0.925151
+test_log_loss                                                        0.073789
+test_accuracy                                                        0.971898
+test_route_continuity                                                0.940914
+fit_time_s                                                          25.812632
+inference_ms_per_1k_rows                                             0.409491
+done
