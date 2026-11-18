@@ -93,6 +93,5 @@ The response contains GPS points, the predicted route polyline, the predicted ar
 - Splits are trip-level, and CV uses GroupKFold by trip.
 
 ## AI assistance disclosure
-The code in this repository was written with the help of an AI assistant (Claude). All results in `results/` and
-`figures/` come from actually running these notebooks. Team members are responsible for reviewing and understanding the code
-and must be able to explain it.
+The code in this repository was written with the help of an AI assistant but interpreted and understood by all. The results came by running the notebook 
+and training the model
