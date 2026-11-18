@@ -1,0 +1,5 @@
+{'radius_m': 20, 'candidate_miss_rate': np.float64(0.03762494872514519), 'mean_candidates': 4.671469426500761}
+{'radius_m': 30, 'candidate_miss_rate': np.float64(0.015420237915326323), 'mean_candidates': 6.901350351490845}
+{'radius_m': 50, 'candidate_miss_rate': np.float64(5.397353138021114e-06), 'mean_candidates': 11.887796473833134}
+{'radius_m': 75, 'candidate_miss_rate': np.float64(5.397353138021114e-06), 'mean_candidates': 18.76994622818217}
+{'radius_m': 100, 'candidate_miss_rate': np.float64(5.397353138021114e-06), 'mean_candidates': 24.777334819639258}
